@@ -83,25 +83,21 @@ button,
 /* User Requested Font Classes */
 /* User Requested Font Classes */
 .atkinson-hyperlegible-regular {
-    font-family: "Atkinson Hyperlegible", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .atkinson-hyperlegible-bold {
-    font-family: "Atkinson Hyperlegible", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
 .atkinson-hyperlegible-regular-italic {
-    font-family: "Atkinson Hyperlegible", sans-serif;
     font-weight: 400;
     font-style: italic;
 }
 
 .atkinson-hyperlegible-bold-italic {
-    font-family: "Atkinson Hyperlegible", sans-serif;
     font-weight: 700;
     font-style: italic;
 }
@@ -183,35 +179,33 @@ button,
 
 /* Custom Button Styles from User Request */
 .btn-custom-primary {
-    display: flex !important;
-    align-items: center !important;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    /* Added for text alignment since it's a flex container */
-    gap: 10px !important;
+    gap: 10px;
     padding: 12px 32px !important;
-    background-color: #0C2030 !important;
-    color: var(--Primary-Colour-White, #FFF) !important;
-    border-radius: 3px !important;
+    /* Keep !important to override Bootstrap utilities px-5 py-3 */
+    background-color: #0C2030;
+    color: var(--Primary-Colour-White, #FFF);
+    border-radius: 3px;
 
     /* Typography */
     font-family: 'Roboto', sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-    line-height: 32px !important;
-    /* 200% */
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    text-align: center !important;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
 
-    border: 1px solid #0C2030 !important;
-    /* Explicitly set border to match background for seamless look, or keep none if preferred, but hover needs it. Switching to 1px solid to match hover size to prevent layout shift */
+    border: 1px solid #0C2030;
 }
 
 .btn-custom-primary:hover {
-    background-color: transparent !important;
-    border: 1px solid #0C2030 !important;
-    color: #0C2030 !important;
+    background-color: transparent;
+    border: 1px solid #0C2030;
+    color: #0C2030;
 }
 
 .btn-custom-outline {
@@ -266,6 +260,18 @@ section.content-section {
 .content-section p {
     max-width: 1570px;
     width: 100%;
+}
+
+.intro-body-text {
+    color: var(--color-text-body);
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    text-box-trim: trim-both;
+    text-box-edge: cap;
 }
 
 @media (max-width: 991.98px) {
@@ -398,9 +404,7 @@ section.map-section {
     padding-top: 67px;
 }
 
-.map-section .bi-geo-alt-fill.display-4 {
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
+
 
 .contact-map-wrapper {
     background-color: #EEE8E8;
