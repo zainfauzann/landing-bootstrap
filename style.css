@@ -1,26 +1,43 @@
-/* Global Styles & Variables */
+/* =========================================
+   1. Setup & Configuration
+   ========================================= */
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir-Book.woff2') format('woff2');
+    font-weight: 350;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir-Book.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('fonts/Avenir-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
 :root {
-    /* Colors from Figma */
     --color-primary: #243645;
     --color-primary-dark-grey: #3D3935;
     --color-hero-bg: #374B5B;
-    /* New color from user request */
     --color-light-grey: #F2F2F2;
-    /* Background grey */
     --color-white: #FFFFFF;
 
     --color-text-heading: #0E1317;
     --color-text-body: #1B1E21;
 
     --color-accent-pink: #D62828;
-    /* Date color roughly from screenshot */
 
-    /* Fonts */
-    /* Fonts */
     --font-primary: "Atkinson Hyperlegible", sans-serif;
     --font-secondary: "Roboto", sans-serif;
     --font-action: "Roboto", sans-serif;
-    /* Buttons mapped to Roboto */
 }
 
 body {
@@ -33,6 +50,10 @@ body {
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
+
+/* =========================================
+   2. Typography & Utilities
+   ========================================= */
 
 h1,
 h2,
@@ -47,14 +68,24 @@ h6 {
     text-box-edge: cap alphabetic;
 }
 
-
-/* Global Button Font */
-button,
-.btn {
-    font-family: var(--font-secondary) !important;
+.lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
-/* Utility Classes */
+.h2-heading {
+    color: var(--Heading, #0E1317);
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    text-box-trim: trim-both;
+    text-box-edge: cap;
+}
+
 .text-primary-custom {
     color: var(--color-primary) !important;
 }
@@ -79,51 +110,203 @@ button,
     font-family: var(--font-secondary) !important;
 }
 
-/* User Requested Font Classes - Cleaned up */
-
-
 .text-small {
     font-size: 13px;
 }
 
-/* Header */
+/* =========================================
+   3. Header & Navigation
+   ========================================= */
+
 .top-bar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 48px;
+    /* Spec fixed height */
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-content {
+    gap: 22px;
+    /* Spec gap */
+}
+
+.top-bar-content a {
+    color: var(--White, #FFF) !important;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    transition: opacity 0.2s;
+    /* Smooth transition */
+}
+
+.top-bar-content a:hover {
+    text-decoration: underline !important;
+    opacity: 0.8;
+}
+
+.logo-bar {
+    height: 156px;
+    /* Spec fixed height */
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    width: 169px;
+    /* Spec fixed width */
+    height: 86px;
+    /* Spec fixed height */
 }
 
 .nav-bar {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    height: 48px;
+    /* Spec fixed height */
+    display: flex;
+    align-items: center;
 }
 
+
+/* Navigation List Container */
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Smaller gap for mobile */
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        gap: 36px;
+        /* Spec gap for desktop */
+    }
+}
+
+/* Remove default Bootstrap caret */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Floating Overlay Links */
+.overlay-column {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    /* Optional: smooth corners if hovered */
+    cursor: pointer;
+    /* Ensure pointer cursor */
+}
+
+/* Removed background hover effect */
+
+.overlay-column img {
+    transition: transform 0.3s ease;
+}
+
+.overlay-column:hover img {
+    transform: scale(1.1);
+    /* Animate SVG: Slight zoom */
+}
+
+.overlay-column:hover .overlay-text {
+    text-decoration: underline;
+    /* Underline text */
+}
+
+/* Dropdown Icon Styling */
+.nav-link img {
+    width: 100%;
+    /* Spec size */
+    height: auto;
+    margin-left: 10px;
+    /* Spec gap: 10px */
+    display: inline-block;
+}
+
+/* Navigation Links */
 .nav-link {
-    transition: opacity 0.2s;
+    font-family: 'Roboto', sans-serif !important;
+    /* Spec: Roboto */
+    font-size: 16px !important;
+    /* Spec: 16px */
+    font-weight: 400 !important;
+    /* Spec: 400 */
+    line-height: 24px !important;
+    /* Spec: 24px */
+    letter-spacing: 0.5px !important;
+    /* Spec: 0.5px */
+    color: #FFF !important;
+    /* Spec: #FFF */
+    padding: 12px 16px !important;
+    /* Adjusted for 48px height (24px text + 24px padding) */
+
+    display: flex;
+    align-items: center;
+
+    /* Global Text Trim Requirement */
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+
+    transition: opacity 0.2s, background-color 0.2s;
 }
 
-/* Header Fonts - ROBOTO */
-.top-bar,
-.navbar-brand,
-.nav-link,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle hover effect */
+    border-radius: 0;
+    /* Sharp edges */
+}
+
+/* Dropdown styling to match */
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-primary);
+    /* Match nav background */
+    margin-top: 0;
+    /* Remove gap */
+}
+
 .dropdown-item {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 15px;
+    /* Slightly smaller for sub-items */
+    color: #FFF !important;
+    padding: 10px 20px;
+
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFF !important;
+}
+
+.top-bar,
+.navbar-brand {
     font-family: var(--font-secondary) !important;
 }
 
-.nav-link:hover {
-    opacity: 0.8;
-}
+/* =========================================
+   4. Hero Section
+   ========================================= */
 
-/* Hero Section */
 .hero-content {
     z-index: 1;
-    padding-top: 128px;
-    padding-bottom: 72px;
+    width: 670px;
+    max-width: 100%;
 }
 
-.hero-gap-48 {
-    margin-bottom: 48px !important;
-}
-
-
-/* Hero Title */
 .hero-title {
     color: #FFF;
     font-family: var(--font-primary);
@@ -131,46 +314,52 @@ button,
     font-style: normal;
     font-weight: 700;
     line-height: 66px;
-    /* 103.125% */
-
-    /* Experimental/Future CSS properties requested */
+    padding-right: 10px;
     leading-trim: both;
     text-edge: cap;
     text-box-trim: trim-both;
-    /* Standard property for leading-trim */
     text-box-edge: cap;
-    /* Standard property for text-edge */
 }
 
-
-
-/* Hero Text */
 .hero-text {
+    width: 613.382px;
+    max-width: 100%;
     color: #FFF;
     font-family: "Avenir", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 350;
     line-height: 30px;
-    /* 150% */
-    opacity: 1;
-    /* Override bootstrap opacity classes if needed, or remove them in HTML */
 }
 
-.hero-right img {
-    object-position: center;
+.hero-left {
+    padding: 128px 25px 181px 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-end !important;
+}
+
+.hero-right {
+    min-height: 500px;
 }
 
 .btn-hero-learn-more {
     display: inline-flex;
-    padding: 12px 32px;
-    align-items: flex-start;
+    padding: 0 32px;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     border-radius: 3px;
     border: 1px solid var(--ffffff, #FFF);
-
-    /* Inherited/Base styles for visibility */
-    color: #FFF;
+    height: 56px;
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-family: "Avenir", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -181,15 +370,10 @@ button,
     color: var(--color-primary);
 }
 
-/* Overlay Wrapper & Container (Merged) */
 .floating-overlay-section {
-    /* Position handled by Bootstrap utility classes in HTML where possible, but centering transform is custom */
-    /* position: absolute; - Removed, handled by HTML class */
     z-index: 10;
     left: 50%;
     transform: translate(-50%, 50%);
-
-    /* Visual Styles */
     width: 1366px;
     height: 218px;
     background: rgba(255, 255, 255, 0.40);
@@ -198,12 +382,9 @@ button,
     border-radius: 10px;
 }
 
-/* .overlay-column removed - using Bootstrap utilities d-flex flex-column align-items-center gap-4 */
-
 .overlay-icon-container {
     width: 60px;
     height: 60px;
-    /* Layout handled by Bootstrap utilities centered */
 }
 
 .overlay-icon-container img {
@@ -214,17 +395,44 @@ button,
 .overlay-text {
     font-family: var(--font-primary);
     color: var(--color-primary-dark-grey, #3D3935);
-    /* text-align: center; - Handled by parent .text-center */
     font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    /* 129.412% */
     text-box-trim: trim-both;
     text-box-edge: cap;
 }
 
-/* Custom Button Styles from User Request */
+@media (min-width: 992px) {
+    .hero-section {
+        height: 660px;
+    }
+
+    .hero-right {
+        flex: 1 1 56%;
+        max-width: 1329px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+    .hero-left {
+        padding-left: 5vw !important;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   5. Buttons & Components
+   ========================================= */
+
+button,
+.btn {
+    font-family: var(--font-secondary) !important;
+}
+
 .btn-custom-primary {
     display: flex;
     align-items: center;
@@ -232,12 +440,10 @@ button,
     gap: 10px;
     padding: 0 32px !important;
     height: 56px;
-    /* Keep !important to override Bootstrap utilities px-5 py-3 */
     background-color: #0C2030;
     color: var(--Primary-Colour-White, #FFF);
     border-radius: 3px;
-
-    /* Typography */
+    border: 1px solid #0C2030;
     font-family: var(--font-secondary) !important;
     font-size: 16px;
     font-weight: 400;
@@ -246,8 +452,6 @@ button,
     letter-spacing: 3px;
     text-transform: uppercase;
     text-align: center;
-
-    border: 1px solid #0C2030;
 }
 
 .btn-custom-primary:hover {
@@ -281,28 +485,10 @@ button,
     border: 1px solid #0C2030 !important;
 }
 
+/* =========================================
+   6. Content Section
+   ========================================= */
 
-/* Typography Overrides */
-.h2-heading {
-    color: var(--Heading, #0E1317);
-    font-family: var(--font-primary);
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px;
-    /* 111.111% */
-    text-box-trim: trim-both;
-    text-box-edge: cap;
-}
-
-.lead {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-box-trim: trim-both;
-    text-box-edge: cap alphabetic;
-}
-
-/* --- Content Section --- */
 section.content-section {
     gap: 52px;
     padding: 96px 175px;
@@ -334,7 +520,10 @@ section.content-section {
     }
 }
 
-/* --- News Section --- */
+/* =========================================
+   7. News Section
+   ========================================= */
+
 section.news-section {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -353,9 +542,7 @@ section.news-section {
 
 .news-image-container {
     width: 100%;
-    /* Responsive width */
     height: 300px;
-    /* Fixed height for consistency */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -438,39 +625,24 @@ section.news-section {
     transform: translate(2px, -2px);
 }
 
-/* Footer Fonts - ROBOTO */
-footer,
-footer p,
-footer a,
-footer span,
-footer h6,
-footer .btn {
-    font-family: var(--font-secondary) !important;
-}
+/* =========================================
+   8. Map & Contact Section
+   ========================================= */
 
-.footer-link {
-    font-size: 14px;
-}
-
-/* --- Map & Contact Section --- */
 section.map-section {
     padding-top: 67px;
 }
-
-
 
 .contact-map-wrapper {
     background-color: #EEE8E8;
     height: 470px;
     max-width: 1336px;
-    /* Fixed width from Figma/Design */
     border-radius: 20px;
 }
 
 .contact-info-box {
     height: 470px;
     border-radius: 20px 0 0 20px;
-    /* Ensure left corners match wrapper */
     background: rgba(255, 255, 255, 0.80);
 }
 
@@ -498,14 +670,12 @@ section.map-section {
     background: lightgray 50% / cover no-repeat;
 }
 
-/* Responsive adjustments for Map Section */
 @media (max-width: 991.98px) {
     .contact-map-wrapper {
         flex-direction: column;
         height: auto;
         width: 100%;
         display: flex;
-        /* Override inline-flex */
     }
 
     .contact-info-box {
@@ -513,7 +683,6 @@ section.map-section {
         height: auto;
         border-radius: 20px 20px 0 0;
         align-items: center;
-        /* Center align on mobile */
         text-align: center;
     }
 
@@ -521,5 +690,90 @@ section.map-section {
         width: 100%;
         height: 400px;
         border-radius: 0 0 20px 20px;
+    }
+}
+
+/* =========================================
+   9. Footer
+   ========================================= */
+
+footer,
+footer p,
+footer a,
+footer span,
+footer h6,
+footer .btn {
+    font-family: var(--font-secondary) !important;
+}
+
+.footer-link {
+    font-size: 14px;
+}
+
+.footer-heading {
+    color: var(--Heading, #0E1317) !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    letter-spacing: 0.15px !important;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+.footer-menu-item {
+    color: var(--Body, #1B1E21) !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    text-decoration: none !important;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    width: 134px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-contact-text {
+    color: var(--Grey-1, #2D2D2D) !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+.footer-contact-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-logo {
+    width: 220px;
+    height: 106px;
+}
+
+.footer-contact-item {
+    width: 274px;
+}
+
+.footer-main-flex {
+    gap: 48px;
+    /* Mobile gap */
+}
+
+@media (min-width: 992px) {
+    .footer-main-flex {
+        gap: 140px;
+        /* Desktop gap from design */
+        justify-content: flex-start !important;
+        /* Override bootstrap if needed */
     }
 }
