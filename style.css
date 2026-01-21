@@ -23,6 +23,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Circular Std';
+    src: url('fonts/CircularStd-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 :root {
     --color-primary: #243645;
     --color-primary-dark-grey: #3D3935;
@@ -374,10 +381,16 @@ h6 {
     z-index: 10;
     left: 50%;
     transform: translate(-50%, 50%);
-    width: 1366px;
-    height: 218px;
+    width: 95%;
+    max-width: 1366px;
+    height: auto;
+    min-height: 218px;
+    gap: 20px;
     background: rgba(255, 255, 255, 0.40);
-    box-shadow: 57.733px -57.733px 57.733px 0 rgba(194, 194, 194, 0.20) inset, -57.733px 57.733px 57.733px 0 rgba(255, 255, 255, 0.20) inset;
+    box-shadow:
+        0 4px 40px 0 rgba(0, 0, 0, 0.25),
+        57.733px -57.733px 57.733px 0 rgba(194, 194, 194, 0.20) inset,
+        -57.733px 57.733px 57.733px 0 rgba(255, 255, 255, 0.20) inset;
     backdrop-filter: blur(10px);
     border-radius: 10px;
 }
@@ -517,6 +530,16 @@ section.content-section {
     .content-section {
         padding: 50px 20px;
         gap: 30px;
+        margin-top: 280px;
+    }
+
+    .floating-overlay-section {
+        padding: 24px !important;
+    }
+
+    .overlay-column {
+        flex: 1 1 40%;
+        max-width: 200px;
     }
 }
 
@@ -776,4 +799,48 @@ footer .btn {
         justify-content: flex-start !important;
         /* Override bootstrap if needed */
     }
+}
+
+.footer-social-heading {
+    color: var(--Heading, #0E1317);
+    font-family: "Circular Std", sans-serif !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.footer-social-wrapper {
+    display: flex;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-icon {
+    color: var(--Body, #1B1E21);
+    line-height: normal;
+    width: 20px;
+    height: auto;
+}
+
+.fb-icon {
+    width: 12px !important;
+}
+
+.footer-social-section {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left !important;
+}
+
+.footer-social-icons {
+    gap: 50px;
+}
+
+.footer-social-wrapper:hover {
+    opacity: 0.8;
 }

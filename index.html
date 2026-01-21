@@ -30,24 +30,29 @@
     <header>
         <!-- Top Bar -->
         <div class="top-bar bg-primary-custom text-white py-1">
-            <div class="container d-flex justify-content-end text-small font-secondary top-bar-content">
-                <a href="https://www.google.com" target="_blank" class="text-white text-decoration-none small">Sublink
-                    2</a>
-                <a href="https://www.google.com" class="text-white text-decoration-none small">Sublink 1</a>
+            <div class="container d-flex justify-content-end gap-4 text-small font-secondary">
+                <a href="#" class="text-white text-decoration-none small">Sublink 2</a>
+                <a href="#" class="text-white text-decoration-none small">Sublink 1</a>
             </div>
         </div>
 
         <!-- Logo Bar -->
         <div class="logo-bar bg-light-grey py-3">
             <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center gap-2">
-                    <img src="assets/Image Thumbnail.png" alt="Alyka Logo" class="main-logo">
-                </a>
+                <div class="navbar-brand d-flex align-items-center gap-2">
+                    <!-- Logo Icon (Square/Circle placeholder) -->
+                    <div class="d-flex gap-1 text-primary-custom">
+                        <i class="bi bi-square-fill fs-4"></i>
+                        <i class="bi bi-circle-fill fs-4"></i>
+                        <i class="bi bi-circle-fill fs-4"></i>
+                    </div>
+                    <span class="h4 fw-bold text-primary-custom mb-0 font-primary">logoipsum</span>
+                </div>
             </div>
         </div>
 
         <!-- Nav Bar -->
-        <div class="nav-bar bg-primary-custom">
+        <div class="nav-bar bg-primary-custom py-2">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark p-0">
                     <div class="container-fluid px-0">
@@ -57,14 +62,14 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav gap-4">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Menu Item</a>
+                                    <a class="nav-link text-white small font-secondary" href="#">Menu Item</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Drop Down <img src="assets/angle-down.svg" alt="Dropdown">
+                                    <a class="nav-link dropdown-toggle text-white small font-secondary" href="#"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Drop Down
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -72,25 +77,25 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Menu Item 2 <img src="assets/angle-down.svg" alt="Dropdown">
+                                    <a class="nav-link dropdown-toggle text-white small font-secondary" href="#"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Menu Item 2
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Submenu</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Menu Item 3 <img src="assets/angle-down.svg" alt="Dropdown">
+                                    <a class="nav-link dropdown-toggle text-white small font-secondary" href="#"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Menu Item 3
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Submenu</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Menu Item</a>
+                                    <a class="nav-link text-white small font-secondary" href="#">Menu Item</a>
                                 </li>
                             </ul>
                         </div>
@@ -104,10 +109,11 @@
     <section class="hero-section position-relative">
         <div class="d-flex flex-column flex-lg-row h-100">
             <!-- Left: Text -->
-            <div class="hero-left bg-hero-side text-white d-flex flex-column flex-grow-1">
-                <div class="hero-content d-inline-flex flex-column align-items-start gap-5">
-                    <h1 class="hero-title mb-0">Lorem ipsum dolor sit amet, consectetur</h1>
-                    <p class="hero-text mb-0">
+            <div
+                class="hero-left bg-hero-side text-white p-5 d-flex align-items-center justify-content-center flex-grow-1">
+                <div class="hero-content ps-lg-5" style="max-width: 600px;">
+                    <h1 class="hero-title hero-gap-48">Lorem ipsum dolor sit amet, consectetur</h1>
+                    <p class="hero-text hero-gap-48">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque quam tempus elit diam ante nisl,
                         pretium. Tortor purus amet adipiscing adipiscing aliquet adipiscing.
                     </p>
@@ -116,47 +122,44 @@
                 </div>
             </div>
             <!-- Right: Image -->
-            <div class="hero-right bg-secondary position-relative">
-                <img src="assets/hero banner 2.jpg" alt="Woman in Kitchen" class="w-100 h-100 object-fit-cover">
+            <div class="hero-right bg-secondary position-relative flex-grow-1" style="min-height: 500px;">
+                <img src="assets/hero.jpg" alt="Woman in Kitchen" class="w-100 h-100 object-fit-cover">
             </div>
         </div>
 
         <!-- Floating Overlay Icons -->
-        <div
-            class="floating-overlay-section position-absolute bottom-0 d-none d-lg-flex justify-content-between align-items-center p-4">
-            <!-- Icon Items (Updated with Bootstrap Utilities) -->
-            <a href="https://www.google.com" target="_blank"
-                class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
-                <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
-                    <img src="assets/laptop-01.svg" alt="Laptop">
+        <div class="floating-overlay-section position-absolute bottom-0 d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center p-4">
+                <!-- Icon Items (Updated with Bootstrap Utilities) -->
+                <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+                    <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
+                        <img src="assets/laptop-01.svg" alt="Laptop">
+                    </div>
+                    <p class="overlay-text mb-0">Lorem ipsum dolor</p>
                 </div>
-                <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </a>
-            <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
-                <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
-                    <img src="assets/bags-01.svg" alt="Briefcase">
+                <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+                    <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
+                        <img src="assets/bags-01.svg" alt="Briefcase">
+                    </div>
+                    <p class="overlay-text mb-0">Lorem ipsum dolor</p>
                 </div>
-                <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </div>
-            <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
-                <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
-                    <img src="assets/basketball-01.svg" alt="Basketball">
+                <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+                    <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
+                        <img src="assets/basketball-01.svg" alt="Basketball">
+                    </div>
+                    <p class="overlay-text mb-0">Lorem ipsum dolor</p>
                 </div>
-                <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </div>
-            <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
-                <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
-                    <img src="assets/gym.svg" alt="Weights">
+                <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+                    <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
+                        <img src="assets/gym.svg" alt="Weights">
+                    </div>
+                    <p class="overlay-text mb-0">Lorem ipsum dolor</p>
                 </div>
-                <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </div>
-            <a href="https://www.google.com" target="_blank"
-                class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
-                <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
-                    <img src="assets/calendar-01.svg" alt="Calendar">
+                <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+                    <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
+                        <img src="assets/calendar-01.svg" alt="Calendar">
+                    </div>
+                    <p class="overlay-text mb-0">Lorem ipsum dolor</p>
                 </div>
-                <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </a>
         </div>
     </section>
 
@@ -218,8 +221,7 @@
                     </div>
                 </div>
 
-                <a href="https://maps.app.goo.gl/ebGknkfuFpqFfE6p6" target="_blank"
-                    class="btn btn-custom-primary px-5 py-2 small">Get Directions</a>
+                <a href="#" class="btn btn-custom-primary px-5 py-2 small">Get Directions</a>
             </div>
 
             <!-- Map -->
@@ -352,58 +354,77 @@
     <!-- Footer -->
     <footer class="bg-light-grey pt-5">
         <div class="container pb-5">
-            <div class="d-flex flex-column flex-lg-row footer-main-flex">
+            <div class="row">
                 <!-- Left Column: Site Map & Contact -->
-                <div class="flex-grow-1">
+                <div class="col-lg-9 pe-lg-5">
                     <!-- Site Map -->
                     <div class="mb-5">
-                        <h6 class="mb-3 footer-heading">Site Map</h6>
-                        <div class="d-flex gap-4 flex-wrap">
-                            <a href="#" class="footer-menu-item">Menu Item</a>
-                            <a href="#" class="footer-menu-item">Drop Down</a>
-                            <a href="#" class="footer-menu-item">Mega Menu</a>
-                            <a href="#" class="footer-menu-item">Menu Item</a>
-                            <a href="#" class="footer-menu-item">Menu Item</a>
+                        <h6 class="fw-bold mb-4 font-primary">Site Map</h6>
+                        <div class="d-flex gap-5 flex-wrap">
+                            <a href="#" class="text-secondary text-decoration-none small font-secondary">Menu Item</a>
+                            <a href="#" class="text-secondary text-decoration-none small font-secondary">Drop Down</a>
+                            <a href="#" class="text-secondary text-decoration-none small font-secondary">Mega Menu</a>
+                            <a href="#" class="text-secondary text-decoration-none small font-secondary">Menu Item</a>
+                            <a href="#" class="text-secondary text-decoration-none small font-secondary">Menu Item</a>
                         </div>
                     </div>
 
                     <!-- Contact Details -->
                     <div>
-                        <h6 class="mb-4 footer-heading">Contact Details</h6>
-                        <div class="d-flex flex-wrap row-gap-3 column-gap-4">
-                            <div class="d-flex gap-2 align-items-center w-100">
-                                <img src="assets/map-marker-alt.svg" alt="Location" class="footer-contact-icon">
-                                <span class="footer-contact-text">1/440 Hay Street, Preston VIC, Australia</span>
+                        <h6 class="fw-bold mb-4 font-primary">Contact Details</h6>
+                        <div class="row g-4">
+                            <div class="col-md-3">
+                                <div class="d-flex gap-2">
+                                    <i class="fa-solid fa-location-dot mt-1 text-secondary"></i>
+                                    <span class="small text-secondary font-secondary">1/440 Hay Street, Preston VIC,
+                                        Australia</span>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 align-items-center footer-contact-item">
-                                <img src="assets/phone.svg" alt="Phone" class="footer-contact-icon">
-                                <span class="footer-contact-text">(08) 9200 4429</span>
+                            <div class="col-md-3">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <i class="fa-solid fa-phone text-secondary"></i>
+                                    <span class="small text-secondary font-secondary">(08) 9200 4429</span>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 align-items-center footer-contact-item">
-                                <img src="assets/mobile.svg" alt="Mobile" class="footer-contact-icon">
-                                <span class="footer-contact-text">(+61) 0400 000 000</span>
+                            <div class="col-md-3">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <i class="fa-solid fa-mobile-screen text-secondary"></i>
+                                    <span class="small text-secondary font-secondary">(+61) 0400 000 000</span>
+                                </div>
                             </div>
-                            <div class="d-flex gap-2 align-items-center footer-contact-item">
-                                <img src="assets/envelope-cropped.svg" alt="Email" class="footer-contact-icon">
-                                <span class="footer-contact-text">home@alyka.com.au</span>
+                            <div class="col-md-3">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <i class="fa-solid fa-envelope text-secondary"></i>
+                                    <span class="small text-secondary font-secondary">home@alyka.com.au</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Column: Logo & Social -->
-                <div class="d-flex flex-column align-items-lg-end mt-4 mt-lg-0">
-                    <!-- Logo -->
-                    <div class="mb-4">
-                        <img src="assets/Image Thumbnail.png" alt="Alyka Logo" class="footer-logo">
-                    </div>
+                <div class="col-lg-3 mt-4 mt-lg-0 text-lg-end">
+                    <div class="footer-social-section ms-lg-auto">
+                        <!-- Logo -->
+                        <div class="mb-2">
+                            <img src="assets/Footer Logo.svg" alt="Logoipsum" class="footer-logo">
+                        </div>
 
-                    <h6 class="fw-bold mb-3 font-primary small">Find Us On Social Media</h6>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-pinterest-p"></i></a>
-                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-youtube"></i></a>
+                        <h6 class="footer-social-heading mb-3 text-start">Find Us On Social Media</h6>
+                        <div class="d-flex footer-social-icons">
+                            <a href="https://www.facebook.com/Alykadigital" target="_blank" class="footer-social-wrapper">
+                                <img src="assets/facebook.svg" alt="Facebook" class="footer-social-icon fb-icon">
+                            </a>
+                            <a href="https://www.instagram.com/alykadigital" target="_blank" class="footer-social-wrapper">
+                                <img src="assets/instagram.svg" alt="Instagram" class="footer-social-icon">
+                            </a>
+                            <a href="https://co.pinterest.com/alykaweb/" target="_blank" class="footer-social-wrapper">
+                                <img src="assets/pinterest.svg" alt="Pinterest" class="footer-social-icon">
+                            </a>
+                            <a href="#" class="footer-social-wrapper">
+                                <img src="assets/youtube.svg" alt="YouTube" class="footer-social-icon">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
