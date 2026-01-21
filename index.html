@@ -29,7 +29,7 @@
     <!-- Header Section -->
     <header>
         <!-- Top Bar -->
-        <div class="top-bar bg-primary-custom text-white py-1">
+        <div class="top-bar bg-primary text-white py-1 d-flex align-items-center">
             <div class="container d-flex justify-content-end text-small font-secondary top-bar-content">
                 <a href="https://www.google.com" target="_blank" class="text-white text-decoration-none small">Sublink
                     2</a>
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Logo Bar -->
-        <div class="logo-bar bg-light-grey py-3">
+        <div class="logo-bar bg-light py-3 d-flex align-items-center">
             <div class="container">
                 <a href="#" class="navbar-brand d-flex align-items-center gap-2">
                     <img src="assets/Image Thumbnail.png" alt="Alyka Logo" class="main-logo">
@@ -47,7 +47,7 @@
         </div>
 
         <!-- Nav Bar -->
-        <div class="nav-bar bg-primary-custom">
+        <div class="nav-bar bg-primary d-flex align-items-center">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark p-0">
                     <div class="container-fluid px-0 justify-content-end">
@@ -55,20 +55,20 @@
                             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="offcanvas offcanvas-end bg-primary-custom" tabindex="-1" id="offcanvasNavbar"
+                        <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="offcanvasNavbar"
                             aria-labelledby="offcanvasNavbarLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title text-white font-secondary" id="offcanvasNavbarLabel">Menu</h5>
+                                <h5 class="offcanvas-title text-white font-secondary" id="offcanvasNavbarLabel"></h5>
                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <ul class="navbar-nav w-100 justify-content-start gap-4">
+                                <ul class="navbar-nav w-100 justify-content-start gap-1 gap-lg-4">
                                     <li class="nav-item">
                                         <a class="nav-link text-white small font-secondary" href="#">Menu Item</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white small font-secondary" href="#"
+                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between" href="#"
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Drop Down <img src="assets/angle-down.svg" alt="Dropdown">
                                         </a>
@@ -78,7 +78,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white small font-secondary" href="#"
+                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between" href="#"
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu Item 2 <img src="assets/angle-down.svg" alt="Dropdown">
                                         </a>
@@ -87,7 +87,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white small font-secondary" href="#"
+                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between" href="#"
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu Item 3 <img src="assets/angle-down.svg" alt="Dropdown">
                                         </a>
@@ -118,12 +118,12 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque quam tempus elit diam ante nisl,
                         pretium. Tortor purus amet adipiscing adipiscing aliquet adipiscing.
                     </p>
-                    <a href="#" class="btn btn-hero-learn-more text-uppercase font-secondary"
+                    <a href="#" class="btn btn-hero-learn-more text-uppercase font-secondary d-inline-flex align-items-center justify-content-center gap-2"
                         style="letter-spacing: 1px;">Learn More</a>
                 </div>
             </div>
             <!-- Right: Image -->
-            <div class="hero-right bg-secondary position-relative">
+            <div class="hero-right position-relative">
                 <img src="assets/hero banner 2.jpg" alt="Woman in Kitchen" class="w-100 h-100 object-fit-cover">
             </div>
         </div>
@@ -168,7 +168,7 @@
     </section>
 
     <!-- H2 Text Section -->
-    <section class="content-section bg-light-grey d-flex flex-column align-items-center w-100">
+    <section class="content-section bg-light d-flex flex-column align-items-center w-100">
         <h2 class="h2-heading fw-bold mb-0 font-primary">H2 Lorem ipsum dolor sit</h2>
         <p class="intro-body-text mb-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque quam tempus elit diam ante nisl,
@@ -191,8 +191,8 @@
 
         </p>
         <div class="d-flex justify-content-center gap-3 w-100">
-            <a href="#" class="btn btn-custom-primary px-5 py-3 small">Discover More</a>
-            <a href="#" class="btn btn-custom-outline px-5 py-3 small">Contact Us</a>
+            <a href="#" class="btn btn-custom-primary px-5 py-3 small d-flex align-items-center justify-content-center gap-2">Discover More</a>
+            <a href="#" class="btn btn-custom-outline px-5 py-3 small d-flex align-items-center justify-content-center">Contact Us</a>
         </div>
     </section>
 
@@ -225,7 +225,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn btn-custom-primary px-5 py-2 small">Get Directions</a>
+                <a href="#" class="btn btn-custom-primary px-5 py-2 small d-flex align-items-center justify-content-center gap-2">Get Directions</a>
             </div>
 
             <!-- Map -->
@@ -241,7 +241,7 @@
         <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 w-100 mx-auto px-4">
 
             <!-- News Card 1 -->
-            <div class="card border-0 h-100 bg-light-grey rounded-0">
+            <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
                         <div class="news-image-container" style="background-image: url('assets/news1.png');"></div>
@@ -269,7 +269,7 @@
             </div>
 
             <!-- News Card 2 -->
-            <div class="card border-0 h-100 bg-light-grey rounded-0">
+            <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
                         <div class="news-image-container" style="background-image: url('assets/news2.png');"></div>
@@ -297,7 +297,7 @@
             </div>
 
             <!-- News Card 3 -->
-            <div class="card border-0 h-100 bg-light-grey rounded-0">
+            <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
                         <div class="news-image-container" style="background-image: url('assets/news3.png');"></div>
@@ -325,7 +325,7 @@
             </div>
 
             <!-- News Card 4 -->
-            <div class="card border-0 h-100 bg-light-grey rounded-0">
+            <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
                         <div class="news-image-container" style="background-image: url('assets/news4.png');"></div>
@@ -356,15 +356,15 @@
     </section>
 
         <!-- Footer -->
-    <footer class="bg-light-grey">
+    <footer class="bg-light">
         <div class="container">
             <div class="d-flex flex-column flex-lg-row footer-main-flex py-5">
                 <!-- Left Column: Site Map & Contact -->
                 <div class="flex-grow-1">
                     <!-- Site Map -->
-                    <div class="mb-5">
+                    <div class="footer-sitemap mb-3 mb-md-5">
                         <h6 class="mb-3 footer-heading">Site Map</h6>
-                        <div class="d-flex gap-4 flex-wrap">
+                        <div class="d-flex flex-column flex-sm-row flex-wrap footer-sitemap-list">
                             <a href="#" class="footer-menu-item">Menu Item</a>
                             <a href="#" class="footer-menu-item">Drop Down</a>
                             <a href="#" class="footer-menu-item">Mega Menu</a>
@@ -398,40 +398,40 @@
                 </div>
 
                 <!-- Right Column: Logo & Social -->
-                    <div class="footer-social-section ms-lg-auto">
-                        <!-- Logo -->
-                        <div class="footer-logo-weapper mb-3">
-                            <img src="assets/Footer Logo.svg" alt="Logoipsum" class="footer-logo">
-                        </div>
-
-                        <h6 class="footer-social-heading mb-4 text-start">Find Us On Social Media</h6>
-                        <div class="d-flex footer-social-icons">
-                            <a href="https://www.facebook.com/Alykadigital" target="_blank" class="footer-social-wrapper">
-                                <img src="assets/facebook.svg" alt="Facebook" class="footer-social-icon fb-icon">
-                            </a>
-                            <a href="https://www.instagram.com/alykadigital" target="_blank" class="footer-social-wrapper">
-                                <img src="assets/instagram.svg" alt="Instagram" class="footer-social-icon">
-                            </a>
-                            <a href="https://co.pinterest.com/alykaweb/" target="_blank" class="footer-social-wrapper">
-                                <img src="assets/pinterest.svg" alt="Pinterest" class="footer-social-icon">
-                            </a>
-                            <a href="#" class="footer-social-wrapper">
-                                <img src="assets/youtube.svg" alt="YouTube" class="footer-social-icon">
-                            </a>
-                        </div>
+                <div class="ms-lg-auto">
+                    <!-- Logo -->
+                    <div class="footer-logo-weapper mb-3">
+                        <img src="assets/Footer Logo.svg" alt="Logoipsum" class="footer-logo">
                     </div>
+
+                    <h6 class="footer-social-heading mb-4 text-start">Find Us On Social Media</h6>
+                    <div class="d-flex footer-social-icons">
+                        <a href="https://www.facebook.com/Alykadigital" target="_blank" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/facebook.svg" alt="Facebook" class="footer-social-icon fb-icon">
+                        </a>
+                        <a href="https://www.instagram.com/alykadigital" target="_blank" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/instagram.svg" alt="Instagram" class="footer-social-icon">
+                        </a>
+                        <a href="https://co.pinterest.com/alykaweb/" target="_blank" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/pinterest.svg" alt="Pinterest" class="footer-social-icon">
+                        </a>
+                        <a href="#" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/youtube.svg" alt="YouTube" class="footer-social-icon">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Bottom Bar -->
-        <div class="bg-primary-custom footer-bottom">
+        <div class="bg-primary footer-bottom d-flex align-items-center">
             <div class="container d-flex justify-content-between text-white small">
                 <div class="footer-info-left d-flex">
                     <a href="#" class="footer-bottom-link link-privacy text-white text-decoration-none">Privacy Policy</a>
                     <a href="#" class="footer-bottom-link text-white text-decoration-none">Terms of use</a>
                 </div>
                 <div class="footer-info-right d-flex">
-                    <span>Site by ALYKA.</span>
+                    <span>Site by&nbsp;<a href="https://www.alyka.com.au/" target="_blank" class="text-white text-decoration-none">ALYKA</a></span>
                 </div>
             </div>
         </div>

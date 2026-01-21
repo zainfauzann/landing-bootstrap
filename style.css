@@ -31,6 +31,10 @@
 }
 
 :root {
+    --bs-primary: #243645;
+    --bs-primary-rgb: 36, 54, 69;
+    --bs-light: #F2F2F2;
+    --bs-light-rgb: 242, 242, 242;
     --color-primary: #243645;
     --color-primary-dark-grey: #3D3935;
     --color-hero-bg: #374B5B;
@@ -85,28 +89,26 @@ h6 {
 .h2-heading {
     color: var(--Heading, #0E1317);
     font-family: var(--font-primary);
-    font-size: 36px;
+    font-size: 1.75rem;
+    /* 28px Mobile */
     font-style: normal;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 2.625rem;
+    /* 1.5x */
     text-box-trim: trim-both;
     text-box-edge: cap;
 }
 
-.text-primary-custom {
-    color: var(--color-primary) !important;
-}
-
-.bg-primary-custom {
-    background-color: var(--color-primary) !important;
+@media (min-width: 992px) {
+    .h2-heading {
+        font-size: 2.25rem;
+        /* 36px Desktop */
+        line-height: 2.5rem;
+    }
 }
 
 .bg-hero-side {
     background-color: var(--color-hero-bg) !important;
-}
-
-.bg-light-grey {
-    background-color: var(--color-light-grey) !important;
 }
 
 .font-primary {
@@ -118,7 +120,7 @@ h6 {
 }
 
 .text-small {
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 /* =========================================
@@ -128,8 +130,6 @@ h6 {
 .top-bar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: 48px;
-    display: flex;
-    align-items: center;
 }
 
 .top-bar-content {
@@ -140,7 +140,7 @@ h6 {
     color: var(--White, #FFF) !important;
     text-align: center;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -155,8 +155,6 @@ h6 {
 
 .logo-bar {
     height: 156px;
-    display: flex;
-    align-items: center;
 }
 
 .logo-bar a {
@@ -172,8 +170,6 @@ h6 {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     height: 48px;
     /* Spec fixed height */
-    display: flex;
-    align-items: center;
 }
 
 .navbar-nav {
@@ -243,9 +239,9 @@ h6 {
 
 .nav-link {
     font-family: 'Roboto', sans-serif !important;
-    font-size: 16px !important;
+    font-size: 1rem !important;
     font-weight: 400 !important;
-    line-height: 24px !important;
+    line-height: 1.5rem !important;
     letter-spacing: 0.5px !important;
     color: #FFF !important;
     padding: 12px 16px !important;
@@ -274,7 +270,7 @@ h6 {
 
 .dropdown-item {
     font-family: 'Roboto', sans-serif !important;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #FFF !important;
     padding: 10px 20px;
     text-box-trim: trim-both;
@@ -304,13 +300,23 @@ h6 {
 .hero-title {
     color: #FFF;
     font-family: var(--font-primary);
-    font-size: 64px;
+    font-size: 2.25rem;
+    /* 36px Mobile */
     font-style: normal;
     font-weight: 700;
-    line-height: 66px;
+    line-height: 3.375rem;
+    /* 1.5x */
     padding-right: 10px;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
+}
+
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 4rem;
+        /* 64px Desktop */
+        line-height: 4.125rem;
+    }
 }
 
 .hero-text {
@@ -318,16 +324,34 @@ h6 {
     max-width: 100%;
     color: #FFF;
     font-family: "Avenir", sans-serif;
-    font-size: 20px;
+    font-size: 1.125rem;
+    /* 18px Mobile */
     font-style: normal;
     font-weight: 350;
-    line-height: 30px;
+    line-height: 1.7rem;
+    /* ~1.5x */
+}
+
+@media (min-width: 992px) {
+    .hero-text {
+        font-size: 1.25rem;
+        /* 20px Desktop */
+        line-height: 1.875rem;
+    }
 }
 
 .hero-left {
-    padding: 128px 25px 181px 0 !important;
-    justify-content: flex-start !important;
-    align-items: flex-end !important;
+    padding: 60px 20px !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+@media (min-width: 992px) {
+    .hero-left {
+        padding: 128px 25px 181px 0 !important;
+        justify-content: flex-start !important;
+        align-items: flex-end !important;
+    }
 }
 
 .hero-right {
@@ -335,21 +359,17 @@ h6 {
 }
 
 .btn-hero-learn-more {
-    display: inline-flex;
     padding: 0 32px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     border-radius: 3px;
     border: 1px solid var(--ffffff, #FFF);
     height: 56px;
     color: var(--ffffff, #FFF);
     text-align: center;
     font-family: "Avenir", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     text-decoration: none;
@@ -393,10 +413,10 @@ h6 {
 .overlay-text {
     font-family: var(--font-primary);
     color: var(--color-primary-dark-grey, #3D3935);
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 22px;
+    line-height: 1.375rem;
     text-box-trim: trim-both;
     text-box-edge: cap;
 }
@@ -422,6 +442,41 @@ h6 {
     }
 }
 
+@media (max-width: 991.98px) {
+    .hero-right {
+        background-color: var(--color-white) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-right {
+        min-height: 143px;
+    }
+
+    .floating-overlay-section {
+        width: 95%;
+        margin: 20px auto !important;
+    }
+
+    .hero-left {
+        padding: 24px 24px !important;
+    }
+
+    section.content-section {
+        margin-top: 0 !important;
+        gap: 20px !important;
+        padding: 24px 24px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .floating-overlay-section {
+        width: 89% !important;
+        margin: 20px auto !important;
+    }
+
+}
+
 /* =========================================
    5. Buttons & Components
    ========================================= */
@@ -432,10 +487,6 @@ button,
 }
 
 .btn-custom-primary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     padding: 0 32px !important;
     height: 56px;
     background-color: #0C2030;
@@ -443,10 +494,10 @@ button,
     border-radius: 3px;
     border: 1px solid #0C2030;
     font-family: var(--font-secondary) !important;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     font-style: normal;
-    line-height: 32px;
+    line-height: 2rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     text-align: center;
@@ -464,15 +515,12 @@ button,
     border: 1px solid #0C2030 !important;
     border-radius: 3px !important;
     height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 0 32px !important;
     font-family: var(--font-secondary) !important;
-    font-size: 16px !important;
+    font-size: 1rem !important;
     font-weight: 400 !important;
     font-style: normal !important;
-    line-height: 32px !important;
+    line-height: 2rem !important;
     letter-spacing: 3px !important;
     text-transform: uppercase !important;
 }
@@ -481,6 +529,15 @@ button,
     background-color: #0C2030 !important;
     color: var(--Primary-Colour-White, #FFF) !important;
     border: 1px solid #0C2030 !important;
+}
+
+@media (max-width: 768px) {
+
+    .btn-custom-primary,
+    .btn-custom-outline {
+        white-space: nowrap;
+        padding: 0 18px !important;
+    }
 }
 
 /* =========================================
@@ -502,24 +559,39 @@ section.content-section {
 .intro-body-text {
     color: var(--color-text-body);
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.125rem;
+    /* 18px Mobile */
     font-style: normal;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 1.7rem;
+    /* ~1.5x */
     text-align: center;
     text-box-trim: trim-both;
     text-box-edge: cap;
+}
+
+@media (min-width: 992px) {
+    .intro-body-text {
+        font-size: 1.25rem;
+        /* 20px Desktop */
+        line-height: 2rem;
+    }
 }
 
 @media (max-width: 991.98px) {
     .content-section {
         padding: 50px 20px;
         gap: 30px;
-        margin-top: 280px;
+        margin-top: 0;
     }
 
     .floating-overlay-section {
         padding: 24px !important;
+        position: relative !important;
+        transform: none;
+        left: auto;
+        bottom: auto;
+        margin: 0 auto;
     }
 
     .overlay-column {
@@ -550,7 +622,6 @@ section.news-section {
     transition: transform 0.3s ease;
     width: 100%;
     max-width: 400px;
-    min-height: 625px !important;
 }
 
 .news-section .card:hover {
@@ -574,10 +645,10 @@ section.news-section {
     margin-bottom: 0 !important;
     color: var(--color-primary-dark-grey, #3D3935);
     font-family: var(--font-primary);
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
@@ -598,10 +669,10 @@ section.news-section {
 .news-date {
     color: var(--color-primary-dark-grey, #3D3935);
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
@@ -609,10 +680,10 @@ section.news-section {
 .news-title {
     color: var(--color-primary-dark-grey, #3D3935);
     font-family: var(--font-primary);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 1.75rem;
     min-height: 72px;
     margin-bottom: 0 !important;
     text-box-trim: trim-both;
@@ -642,6 +713,13 @@ section.news-section {
     transform: translate(2px, -2px);
 }
 
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .news-section .card {
+        width: calc(50% - 12px) !important;
+        max-width: none !important;
+    }
+}
+
 /* =========================================
    8. Map & Contact Section
    ========================================= */
@@ -666,10 +744,11 @@ section.map-section {
 .contact-text-item {
     color: var(--Grey-1, #2D2D2D);
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem;
+    text-align: left;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
@@ -681,7 +760,8 @@ section.map-section {
 }
 
 .map-iframe-custom {
-    width: 762px;
+    width: 100%;
+    max-width: 762px;
     height: 470px;
     border-radius: 0 20px 20px 0;
     background: lightgray 50% / cover no-repeat;
@@ -710,6 +790,12 @@ section.map-section {
     }
 }
 
+@media (max-width: 768px) {
+    section.map-section {
+        padding: 24px 24px !important;
+    }
+}
+
 /* =========================================
    9. Footer
    ========================================= */
@@ -724,16 +810,16 @@ footer .btn {
 }
 
 .footer-link {
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .footer-heading {
     color: var(--Heading, #0E1317) !important;
     font-family: 'Roboto', sans-serif !important;
-    font-size: 18px !important;
+    font-size: 1.125rem !important;
     font-style: normal;
     font-weight: 500 !important;
-    line-height: 24px !important;
+    line-height: 1.5rem !important;
     letter-spacing: 0.15px !important;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
@@ -742,10 +828,10 @@ footer .btn {
 .footer-menu-item {
     color: var(--Body, #1B1E21) !important;
     font-family: 'Roboto', sans-serif !important;
-    font-size: 18px !important;
+    font-size: 1.125rem !important;
     font-style: normal;
     font-weight: 400 !important;
-    line-height: 24px !important;
+    line-height: 1.5rem !important;
     letter-spacing: 0.5px !important;
     text-decoration: none !important;
     text-box-trim: trim-both;
@@ -753,6 +839,18 @@ footer .btn {
     height: 32px;
     display: inline-flex;
     align-items: center;
+    padding-right: 69px;
+}
+
+@media (max-width: 991.98px) {
+    .footer-menu-item {
+        padding-right: 0px !important;
+    }
+
+    .footer-sitemap-list {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .footer-menu-item:hover {
@@ -775,10 +873,10 @@ footer .btn {
 .footer-contact-text {
     color: var(--Grey-1, #2D2D2D) !important;
     font-family: 'Roboto', sans-serif !important;
-    font-size: 18px !important;
+    font-size: 1.125rem !important;
     font-style: normal;
     font-weight: 400 !important;
-    line-height: 24px !important;
+    line-height: 1.5rem !important;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
@@ -798,7 +896,13 @@ footer .btn {
 }
 
 .footer-contact-item {
-    width: 274px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .footer-contact-item {
+        width: 300px;
+    }
 }
 
 .footer-main-flex {
@@ -807,7 +911,7 @@ footer .btn {
 
 @media (min-width: 992px) {
     .footer-main-flex {
-        gap: 140px;
+        gap: 102px;
         /* Desktop gap from design */
         justify-content: flex-start !important;
         /* Override bootstrap if needed */
@@ -817,18 +921,14 @@ footer .btn {
 .footer-social-heading {
     color: var(--Heading, #0E1317);
     font-family: "Circular Std", sans-serif !important;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 2rem;
 }
 
 .footer-social-wrapper {
-    display: flex;
     height: 32px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-social-icon {
@@ -856,8 +956,6 @@ footer .btn {
 
 .footer-bottom {
     height: 48px;
-    display: flex;
-    align-items: center;
 }
 
 .footer-bottom-link {
@@ -875,13 +973,27 @@ footer .btn {
 .footer-info-right span {
     color: var(--White, #FFF);
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.5rem;
     letter-spacing: 0.1px;
     height: 48px;
     padding: 0 24px;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom .link-privacy {
+        padding-left: 0;
+    }
+
+    .footer-bottom-link {
+        padding: 0 10px;
+    }
+
+    .footer-info-right span {
+        padding: 0 0px 0 24px;
+    }
 }
