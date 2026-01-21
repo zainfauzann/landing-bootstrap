@@ -28,16 +28,16 @@
 
     <!-- Header Section -->
     <header>
-        <!-- Top Bar -->
+
         <div class="top-bar bg-primary text-white py-1 d-flex align-items-center">
-            <div class="container d-flex justify-content-end text-small font-secondary top-bar-content">
+            <div class="container d-flex justify-content-end text-small font-secondary top-bar-content gap-4">
                 <a href="https://www.google.com" target="_blank" class="text-white text-decoration-none small">Sublink
                     2</a>
                 <a href="https://www.google.com" class="text-white text-decoration-none small">Sublink 1</a>
             </div>
         </div>
 
-        <!-- Logo Bar -->
+
         <div class="logo-bar bg-light py-3 d-flex align-items-center">
             <div class="container">
                 <a href="#" class="navbar-brand d-flex align-items-center gap-2">
@@ -46,13 +46,14 @@
             </div>
         </div>
 
-        <!-- Nav Bar -->
+
         <div class="nav-bar bg-primary d-flex align-items-center">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark p-0">
                     <div class="container-fluid px-0 justify-content-end">
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="offcanvasNavbar"
@@ -68,8 +69,8 @@
                                         <a class="nav-link text-white small font-secondary" href="#">Menu Item</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between" href="#"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between"
+                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Drop Down <img src="assets/angle-down.svg" alt="Dropdown">
                                         </a>
                                         <ul class="dropdown-menu">
@@ -78,8 +79,8 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between" href="#"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between"
+                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu Item 2 <img src="assets/angle-down.svg" alt="Dropdown">
                                         </a>
                                         <ul class="dropdown-menu">
@@ -87,8 +88,8 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between" href="#"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle text-white small font-secondary justify-content-between"
+                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu Item 3 <img src="assets/angle-down.svg" alt="Dropdown">
                                         </a>
                                         <ul class="dropdown-menu">
@@ -110,7 +111,7 @@
     <!-- Hero Section -->
     <section class="hero-section position-relative">
         <div class="d-flex flex-column flex-lg-row h-100">
-            <!-- Left: Text -->
+
             <div class="hero-left bg-hero-side text-white d-flex flex-column flex-grow-1">
                 <div class="hero-content d-inline-flex flex-column align-items-start gap-5">
                     <h1 class="hero-title mb-0">Lorem ipsum dolor sit amet, consectetur</h1>
@@ -118,20 +119,21 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque quam tempus elit diam ante nisl,
                         pretium. Tortor purus amet adipiscing adipiscing aliquet adipiscing.
                     </p>
-                    <a href="#" class="btn btn-hero-learn-more text-uppercase font-secondary d-inline-flex align-items-center justify-content-center gap-2"
+                    <a href="#"
+                        class="btn btn-hero-learn-more text-uppercase font-secondary d-inline-flex align-items-center justify-content-center gap-2"
                         style="letter-spacing: 1px;">Learn More</a>
                 </div>
             </div>
-            <!-- Right: Image -->
-            <div class="hero-right position-relative">
-                <img src="assets/hero banner 2.jpg" alt="Woman in Kitchen" class="w-100 h-100 object-fit-cover">
+
+            <div class="hero-right position-relative"
+                style="background: url('assets/hero banner 2.jpg') lightgray 50% / cover no-repeat;">
             </div>
         </div>
 
-        <!-- Floating Overlay Icons -->
+
         <div
-            class="floating-overlay-section position-absolute bottom-0 d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center p-4">
-            <!-- Icon Items (Updated with Bootstrap Utilities) -->
+            class="floating-overlay-section position-absolute bottom-0 d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center p-4 w-100">
+
             <a href="https://www.google.com" target="_blank"
                 class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
                 <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
@@ -139,24 +141,27 @@
                 </div>
                 <p class="overlay-text mb-0">Lorem ipsum dolor</p>
             </a>
-            <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+            <a href="https://www.google.com" target="_blank"
+                class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
                 <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
                     <img src="assets/bags-01.svg" alt="Briefcase">
                 </div>
                 <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </div>
-            <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+            </a>
+            <a href="https://www.google.com" target="_blank"
+                class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
                 <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
                     <img src="assets/basketball-01.svg" alt="Basketball">
                 </div>
                 <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </div>
-            <div class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4">
+            </a>
+            <a href="https://www.google.com" target="_blank"
+                class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
                 <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
                     <img src="assets/gym.svg" alt="Weights">
                 </div>
                 <p class="overlay-text mb-0">Lorem ipsum dolor</p>
-            </div>
+            </a>
             <a href="https://www.google.com" target="_blank"
                 class="overlay-column text-center px-4 flex-grow-1 d-flex flex-column align-items-center gap-4 text-decoration-none text-reset">
                 <div class="overlay-icon-container d-flex justify-content-center align-items-center mx-auto mb-2">
@@ -169,8 +174,8 @@
 
     <!-- H2 Text Section -->
     <section class="content-section bg-light d-flex flex-column align-items-center w-100">
-        <h2 class="h2-heading fw-bold mb-0 font-primary">H2 Lorem ipsum dolor sit</h2>
-        <p class="intro-body-text mb-0">
+        <h2 class="h2-heading fw-bold mb-0 font-primary text-center">H2 Lorem ipsum dolor sit</h2>
+        <p class="intro-body-text mb-0 px-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque quam tempus elit diam ante nisl,
             pretium. Tortor purus amet adipiscing adipiscing aliquet adipiscing. Diam et auctor et rutrum
             venenatis elementum ullamcorper pretium dictum. Varius at elit, nullam convallis amet. Donec fermentum
@@ -191,15 +196,19 @@
 
         </p>
         <div class="d-flex justify-content-center gap-3 w-100">
-            <a href="#" class="btn btn-custom-primary px-5 py-3 small d-flex align-items-center justify-content-center gap-2">Discover More</a>
-            <a href="#" class="btn btn-custom-outline px-5 py-3 small d-flex align-items-center justify-content-center">Contact Us</a>
+            <a href="#"
+                class="btn btn-custom-primary px-5 py-3 small d-flex align-items-center justify-content-center gap-2">Discover
+                More</a>
+            <a href="#"
+                class="btn btn-custom-outline px-5 py-3 small d-flex align-items-center justify-content-center">Contact
+                Us</a>
         </div>
     </section>
 
     <!-- Map & Contact Section -->
-    <section class="map-section px-4 px-md-0">
+    <section class="map-section px-4 mx-4 px-md-0">
         <div class="contact-map-wrapper d-flex flex-wrap justify-content-center align-items-center w-100 mx-auto">
-            <!-- Contact Details -->
+
             <div
                 class="contact-info-box d-flex flex-column justify-content-center align-items-start p-5 gap-5 flex-grow-1">
                 <h2 class="font-primary fw-bold mb-0 h2-heading">Get in touch with us</h2>
@@ -225,10 +234,12 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn btn-custom-primary px-5 py-2 small d-flex align-items-center justify-content-center gap-2">Get Directions</a>
+                <a href="#"
+                    class="btn btn-custom-primary px-5 py-2 small d-flex align-items-center justify-content-center gap-2">Get
+                    Directions</a>
             </div>
 
-            <!-- Map -->
+
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.6219413611507!2d145.01428539484445!3d-37.75201265828659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6444463a43fad%3A0xc4a1d968a4aa66cc!2sHay%20St%2C%20Preston%20VIC%203072%2C%20Australia!5e0!3m2!1sen!2smy!4v1768713450186!5m2!1sen!2smy"
                 class="map-iframe-custom" allowfullscreen="" loading="lazy"
@@ -240,7 +251,7 @@
     <section class="news-section bg-white">
         <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 w-100 mx-auto px-4">
 
-            <!-- News Card 1 -->
+
             <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
@@ -249,10 +260,10 @@
                 </div>
 
                 <div
-                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0">
+                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0 gap-4">
                     <div class="news-body-wrapper d-flex flex-column align-items-start w-100">
                         <div class="news-header-wrapper d-flex flex-column align-items-start w-100">
-                            <!-- Date Badge -->
+
                             <div class="news-date-wrapper d-inline-flex align-items-center px-2 py-1">
                                 <span class="news-date text-uppercase">18 Jan 2026</span>
                             </div>
@@ -268,7 +279,7 @@
                 </div>
             </div>
 
-            <!-- News Card 2 -->
+
             <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
@@ -277,10 +288,10 @@
                 </div>
 
                 <div
-                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0">
+                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0 gap-4">
                     <div class="news-body-wrapper d-flex flex-column align-items-start w-100">
                         <div class="news-header-wrapper d-flex flex-column align-items-start w-100">
-                            <!-- Date Badge -->
+
                             <div class="news-date-wrapper d-inline-flex align-items-center px-2 py-1">
                                 <span class="news-date text-uppercase">17 Jan 2026</span>
                             </div>
@@ -296,7 +307,7 @@
                 </div>
             </div>
 
-            <!-- News Card 3 -->
+
             <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
@@ -305,10 +316,10 @@
                 </div>
 
                 <div
-                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0">
+                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0 gap-4">
                     <div class="news-body-wrapper d-flex flex-column align-items-start w-100">
                         <div class="news-header-wrapper d-flex flex-column align-items-start w-100">
-                            <!-- Date Badge -->
+
                             <div class="news-date-wrapper d-inline-flex align-items-center px-2 py-1">
                                 <span class="news-date text-uppercase">16 Jan 2026</span>
                             </div>
@@ -324,7 +335,7 @@
                 </div>
             </div>
 
-            <!-- News Card 4 -->
+
             <div class="card border-0 h-100 bg-light rounded-0">
                 <div class="card-header p-0 border-0 rounded-0">
                     <a href="#">
@@ -333,10 +344,10 @@
                 </div>
 
                 <div
-                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0">
+                    class="card-body news-content-area d-flex flex-column justify-content-between align-items-start rounded-0 gap-4">
                     <div class="news-body-wrapper d-flex flex-column align-items-start w-100">
                         <div class="news-header-wrapper d-flex flex-column align-items-start w-100">
-                            <!-- Date Badge -->
+
                             <div class="news-date-wrapper d-inline-flex align-items-center px-2 py-1">
                                 <span class="news-date text-uppercase">14 Jan 2026</span>
                             </div>
@@ -355,13 +366,13 @@
         </div>
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-light">
         <div class="container">
             <div class="d-flex flex-column flex-lg-row footer-main-flex py-5">
                 <!-- Left Column: Site Map & Contact -->
                 <div class="flex-grow-1">
-                    <!-- Site Map -->
+
                     <div class="footer-sitemap mb-3 mb-md-5">
                         <h6 class="mb-3 footer-heading">Site Map</h6>
                         <div class="d-flex flex-column flex-sm-row flex-wrap footer-sitemap-list">
@@ -373,11 +384,12 @@
                         </div>
                     </div>
 
-                    <!-- Contact Details -->
+
                     <div>
                         <h6 class="mb-4 footer-heading">Contact Details</h6>
                         <div class="d-flex flex-wrap row-gap-3 column-gap-4">
-                            <a href="https://maps.app.goo.gl/ebGknkfuFpqFfE6p6" target="_blank" class="footer-contact-link w-100">
+                            <a href="https://maps.app.goo.gl/ebGknkfuFpqFfE6p6" target="_blank"
+                                class="footer-contact-link w-100">
                                 <img src="assets/map-marker-alt.svg" alt="Location" class="footer-contact-icon">
                                 <span class="footer-contact-text">1/440 Hay Street, Preston VIC, Australia</span>
                             </a>
@@ -397,25 +409,29 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Logo & Social -->
+
                 <div class="ms-lg-auto">
-                    <!-- Logo -->
+
                     <div class="footer-logo-weapper mb-3">
                         <img src="assets/Footer Logo.svg" alt="Logoipsum" class="footer-logo">
                     </div>
 
                     <h6 class="footer-social-heading mb-4 text-start">Find Us On Social Media</h6>
                     <div class="d-flex footer-social-icons">
-                        <a href="https://www.facebook.com/Alykadigital" target="_blank" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                        <a href="https://www.facebook.com/Alykadigital" target="_blank"
+                            class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
                             <img src="assets/facebook.svg" alt="Facebook" class="footer-social-icon fb-icon">
                         </a>
-                        <a href="https://www.instagram.com/alykadigital" target="_blank" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                        <a href="https://www.instagram.com/alykadigital" target="_blank"
+                            class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
                             <img src="assets/instagram.svg" alt="Instagram" class="footer-social-icon">
                         </a>
-                        <a href="https://co.pinterest.com/alykaweb/" target="_blank" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                        <a href="https://co.pinterest.com/alykaweb/" target="_blank"
+                            class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
                             <img src="assets/pinterest.svg" alt="Pinterest" class="footer-social-icon">
                         </a>
-                        <a href="#" class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
+                        <a href="#"
+                            class="footer-social-wrapper d-flex flex-column justify-content-center align-items-center">
                             <img src="assets/youtube.svg" alt="YouTube" class="footer-social-icon">
                         </a>
                     </div>
@@ -423,21 +439,23 @@
             </div>
         </div>
 
-        <!-- Bottom Bar -->
+
         <div class="bg-primary footer-bottom d-flex align-items-center">
             <div class="container d-flex justify-content-between text-white small">
                 <div class="footer-info-left d-flex">
-                    <a href="#" class="footer-bottom-link link-privacy text-white text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link link-privacy text-white text-decoration-none">Privacy
+                        Policy</a>
                     <a href="#" class="footer-bottom-link text-white text-decoration-none">Terms of use</a>
                 </div>
                 <div class="footer-info-right d-flex">
-                    <span>Site by&nbsp;<a href="https://www.alyka.com.au/" target="_blank" class="text-white text-decoration-none">ALYKA</a></span>
+                    <span>Site by&nbsp;<a href="https://www.alyka.com.au/" target="_blank"
+                            class="text-white text-decoration-none">ALYKA</a></span>
                 </div>
             </div>
         </div>
     </footer>
 
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
