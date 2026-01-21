@@ -128,14 +128,12 @@ h6 {
 .top-bar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     height: 48px;
-    /* Spec fixed height */
     display: flex;
     align-items: center;
 }
 
 .top-bar-content {
     gap: 22px;
-    /* Spec gap */
 }
 
 .top-bar-content a {
@@ -148,7 +146,6 @@ h6 {
     line-height: normal;
     text-transform: capitalize;
     transition: opacity 0.2s;
-    /* Smooth transition */
 }
 
 .top-bar-content a:hover {
@@ -158,16 +155,17 @@ h6 {
 
 .logo-bar {
     height: 156px;
-    /* Spec fixed height */
     display: flex;
     align-items: center;
 }
 
+.logo-bar a {
+    width: 169px;
+}
+
 .main-logo {
     width: 169px;
-    /* Spec fixed width */
     height: 86px;
-    /* Spec fixed height */
 }
 
 .nav-bar {
@@ -178,20 +176,38 @@ h6 {
     align-items: center;
 }
 
-
-/* Navigation List Container */
 .navbar-nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* Smaller gap for mobile */
 }
 
 @media (min-width: 992px) {
     .navbar-nav {
         flex-direction: row;
         gap: 36px;
-        /* Spec gap for desktop */
+    }
+
+    .offcanvas {
+        position: static;
+        z-index: auto;
+        width: auto;
+        height: auto;
+        padding-bottom: 0;
+        visibility: visible;
+        background-color: transparent;
+        transform: none;
+        transition: none;
+        border: 0;
+    }
+
+    .offcanvas-header {
+        display: none;
+    }
+
+    .offcanvas-body {
+        padding: 0;
+        overflow: visible;
     }
 }
 
@@ -200,16 +216,11 @@ h6 {
     display: none !important;
 }
 
-/* Floating Overlay Links */
 .overlay-column {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 8px;
-    /* Optional: smooth corners if hovered */
     cursor: pointer;
-    /* Ensure pointer cursor */
 }
-
-/* Removed background hover effect */
 
 .overlay-column img {
     transition: transform 0.3s ease;
@@ -217,48 +228,31 @@ h6 {
 
 .overlay-column:hover img {
     transform: scale(1.1);
-    /* Animate SVG: Slight zoom */
 }
 
 .overlay-column:hover .overlay-text {
     text-decoration: underline;
-    /* Underline text */
 }
 
-/* Dropdown Icon Styling */
 .nav-link img {
-    width: 100%;
-    /* Spec size */
+    width: 12px;
     height: auto;
     margin-left: 10px;
-    /* Spec gap: 10px */
     display: inline-block;
 }
 
-/* Navigation Links */
 .nav-link {
     font-family: 'Roboto', sans-serif !important;
-    /* Spec: Roboto */
     font-size: 16px !important;
-    /* Spec: 16px */
     font-weight: 400 !important;
-    /* Spec: 400 */
     line-height: 24px !important;
-    /* Spec: 24px */
     letter-spacing: 0.5px !important;
-    /* Spec: 0.5px */
     color: #FFF !important;
-    /* Spec: #FFF */
     padding: 12px 16px !important;
-    /* Adjusted for 48px height (24px text + 24px padding) */
-
     display: flex;
     align-items: center;
-
-    /* Global Text Trim Requirement */
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
-
     transition: opacity 0.2s, background-color 0.2s;
 }
 
@@ -267,29 +261,22 @@ h6 {
 .nav-link.active {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.1);
-    /* Subtle hover effect */
     border-radius: 0;
-    /* Sharp edges */
 }
 
-/* Dropdown styling to match */
 .dropdown-menu {
     border: none;
     border-radius: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: var(--color-primary);
-    /* Match nav background */
     margin-top: 0;
-    /* Remove gap */
 }
 
 .dropdown-item {
     font-family: 'Roboto', sans-serif !important;
     font-size: 15px;
-    /* Slightly smaller for sub-items */
     color: #FFF !important;
     padding: 10px 20px;
-
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 }
@@ -322,10 +309,8 @@ h6 {
     font-weight: 700;
     line-height: 66px;
     padding-right: 10px;
-    leading-trim: both;
-    text-edge: cap;
     text-box-trim: trim-both;
-    text-box-edge: cap;
+    text-box-edge: cap alphabetic;
 }
 
 .hero-text {
@@ -504,7 +489,7 @@ button,
 
 section.content-section {
     gap: 52px;
-    padding: 96px 175px;
+    padding: 96px 0px;
     margin-top: 156px;
     background-color: var(--color-light-grey);
 }
@@ -540,6 +525,15 @@ section.content-section {
     .overlay-column {
         flex: 1 1 40%;
         max-width: 200px;
+    }
+
+    .nav-bar {
+        height: auto !important;
+        padding: 10px 0;
+    }
+
+    .navbar-collapse {
+        margin-top: 10px;
     }
 }
 
@@ -756,10 +750,26 @@ footer .btn {
     text-decoration: none !important;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
-    width: 134px;
     height: 32px;
     display: inline-flex;
     align-items: center;
+}
+
+.footer-menu-item:hover {
+    text-decoration: underline !important;
+}
+
+.footer-contact-link {
+    text-decoration: none !important;
+    color: var(--Grey-1, #2D2D2D) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Match gap-2 */
+}
+
+.footer-contact-link:hover {
+    text-decoration: underline !important;
 }
 
 .footer-contact-text {
@@ -771,6 +781,10 @@ footer .btn {
     line-height: 24px !important;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
+}
+
+.footer-bottom .link-privacy {
+    padding-left: 46px;
 }
 
 .footer-contact-icon {
@@ -789,7 +803,6 @@ footer .btn {
 
 .footer-main-flex {
     gap: 48px;
-    /* Mobile gap */
 }
 
 @media (min-width: 992px) {
@@ -841,6 +854,34 @@ footer .btn {
     gap: 50px;
 }
 
+.footer-bottom {
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom-link {
+    display: flex;
+    height: 48px;
+    padding: 0 24px;
+    align-items: center;
+    gap: 24px;
+}
+
 .footer-social-wrapper:hover {
     opacity: 0.8;
+}
+
+.footer-info-right span {
+    color: var(--White, #FFF);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    height: 48px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
 }
